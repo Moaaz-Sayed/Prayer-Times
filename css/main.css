@@ -1,0 +1,164 @@
+/*Start Global Rules*/
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:"Tajawal",sans-serif;
+    background-image: url(../images/backGround.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 90%;
+    background-color: #64501a9e;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+    .container{
+        padding: 0;
+    }
+}
+/*End Global Rules*/
+
+/*Start Header*/
+header{
+    width: 100%;
+    color: antiquewhite;
+}
+header h1{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 50px;
+}
+header h2{
+    font-size: 40px;
+}
+@media (max-width: 767px) {
+    header h2,
+    header p{
+        padding: 0 20px;
+    }
+}
+
+#next-time{
+    text-align: center;
+    font-size: 22px;
+}
+.error-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 40px 50px;
+  border: 3px solid #f5c6cb;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 9999;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #721c24;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.close-btn:hover {
+  color: #a30000;
+}
+/*End Header*/
+
+/*Start Times*/
+
+.times{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.times .box{
+    width: 100px;
+    height: 110px;
+    background-color: #c8bd685c;
+    color: antiquewhite;
+    text-align: center;
+    margin: 40px 2px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+@media (max-width: 767px){
+    .times {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .times .box{
+        margin: 10px;
+    }
+}
+.times .box:hover {
+    background-color: #c8bd68a0;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+/*End Times*/
+
+/*Start Select*/
+.cities{
+    text-align: center;
+    margin: 30px;
+}
+
+#city {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #c8bd685c;
+    color: antiquewhite;
+    border: none;
+    outline: 4px solid transparent;
+    background-image: linear-gradient(to right, #e0c280, #8d6e3f);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+@media (max-width: 767px) {
+    #city{
+        width: 60%;
+    }
+}
+
+.cities option{
+    color: black;
+    
+}
+
+/*End Select*/

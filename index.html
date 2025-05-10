@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/main.css">
+    <!--Render ALL ELements Normally-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <title>مواقيت الصلاة</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>مواقيت الصلاة</h1>
+            <h2 class="city-name" id="cityName">القاهرة</h2>
+            <p class="date" id="date"></p>
+            <p class="date" id="next-time"></p>
+            <hr>
+        </header>
+        <div class="times" id="times">
+            <div class="box">
+                <p class="time-name">الفجر</p>
+                <p class="time" id="fajr"></p>
+            </div>
+            <div class="box">
+                <p class="time-name">الشروق</p>
+                <p class="time" id="shorok"></p>
+            </div>
+            <div class="box">
+                <p class="time-name">الظهر</p>
+                <p class="time" id="duhr"></p>
+            </div>
+            <div class="box">
+                <p class="time-name">العصر</p>
+                <p class="time" id="asr"></p>
+            </div>
+            <div class="box">
+                <p class="time-name">المغرب</p>
+                <p class="time" id="mighreb"></p>
+            </div>
+            <div class="box">
+                <p class="time-name">العشاء</p>
+                <p class="time" id="isha"></p>
+            </div>
+        </div>
+        <div class="cities" id="cities">
+            <select name="city" id="city">
+                <option value="Cairo">القاهرة</option>
+                <option value="Giza">الجيزة</option>
+                <option value="Alexandria">الإسكندرية</option>
+                <option value="Mansoura">المنصورة</option>
+                <option value="Aswan">أسوان</option>
+                <option value="Arish">العريش</option>
+                <option value="El Tor">الطور</option>
+            </select>
+        </div>
+        <!-- <div class="error" id="error">خطـــأ فى تحميل الصفحة</div> -->
+        <div id="errorBox" class="error-popup"> <span id="closeError" class="close-btn">&times;</span>
+            حصل خطأ أثناء تحميل البيانات</div>
+    </div>
+    <!-- Axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
