@@ -17,6 +17,13 @@ body {
     align-items: center;
 }
 
+@media (max-width: 767px) {
+    body{
+        height: 130vh;
+        overflow-y: scroll;
+    }
+}
+
 .container{
     width: 90%;
     background-color: #64501a9e;
